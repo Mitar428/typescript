@@ -1,5 +1,4 @@
 "use strict";
-/*klasi i objekti oop */
 Object.defineProperty(exports, "__esModule", { value: true });
 class Person {
     name;
@@ -8,21 +7,20 @@ class Person {
     constructor(name, surname, age) {
         this.name = name;
         this.surname = surname;
-        this.age = age; /*konstruktor uzima podatke iz klase*/
+        this.age = age;
     }
     getfullname() {
-        return `${this.name} ${this.surname} ${this.age} `; /*cita iz konstruktora*/
+        return `${this.name} ${this.surname} ${this.age} `;
     }
 }
-const Personone = new Person("Mitar", "Rebic", 22); /*cita ime,prezime,godine*/
+const Personone = new Person("Mitar", "Rebic", 22);
 console.log(Personone);
-/*nizovi*/
 let brojevi = [1, 2, 3, 4, 5];
 let imena = ["petar", "marko", "mitar", "predrag"];
-brojevi.push(8); /*ubacujem broj 8 u niz bice 1,2,3,4,5,8*/
-imena.push("milovan"); /*ubacujem ime milovan*/
-console.log(brojevi); /*ispisuje niz brojeva*/
-console.log(imena); /*ispisuje imena*/
+brojevi.push(8);
+imena.push("milovan");
+console.log(brojevi);
+console.log(imena);
 /*grananje */
 let godine = 18;
 if (godine >= 18) {
@@ -31,24 +29,20 @@ if (godine >= 18) {
 else {
     console.log("maloletan");
 }
-/* funkcije*/
 function saberi(a, b) {
     let rezultat = a + b;
     return rezultat;
 }
 let zbir = saberi(2, 4);
-console.log(zbir); /*sabira dva broja definisemo u funkciji parametre a i b na kraju pozivamo funkciju u nju ubacujemo koje brojeve da sabere i na kraju dobijemo rezultat*/
-/*objekat u programiranju {}*/
-/*definisanje objekta*/
+console.log(zbir);
 let osoba = {
     ime: "Mitar",
     prezime: "rebic",
     godine: 22,
     zaposlen: false
 };
-console.log(osoba.ime); /*istampace samo ime Mitar u konzoli zato sto smo pozvali iz objekta osoba.ime*/
-/*polymorphrism omogucava da razlicite klase imaju iste metode ali drugo ponasanje pozivom te metode*/
-/*kljucnom reci extends nasledjujemo klasu Animal*/
+console.log(osoba.ime);
+console.log(osoba.godine);
 class Animal {
     makeSound() {
         console.log("Some animal sound");
@@ -71,7 +65,6 @@ const animals = [
 animals.forEach(animal => {
     animal.makeSound();
 });
-/*inheterance jedna klasa moze da nasledi osobine druge klase pomocu funkcije extends*/
 class Animal1 {
     name;
     constructor(name) {
